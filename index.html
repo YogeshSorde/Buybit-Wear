@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .navbar>div{
+        width: 100%;
+        height: 60px;
+       border: 1px solid rgb(199, 193, 193);
+       display: flex;
+       justify-content: space-around;
+       
+    }
+    #Search{
+        height: 30px;
+        width: 200px;
+
+    }
+    .navbar>div{
+       padding-top: 20px;
+    }
+    .A p{
+      margin-left: 700px;
+    }
+    #MidImage{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        border: 1px solid rgb(140, 133, 133);
+        height: 700px;
+        width: 100%;
+        
+    }
+    #MidImage>div:nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:1 ;
+        grid-row-end:2;
+        border: 1px solid rgb(152, 147, 147);   
+    }
+   
+    #MidImage>div:nth-child(2){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start:1 ;
+        grid-row-end:2 ;
+        border: 1px solid rgb(179, 172, 172);
+    }
+    #MidImage>div:nth-child(1)>img{
+       width: 100%;
+    }
+    #MidImage>div:nth-child(2)>img{
+  width: 100%;
+    }
+    #h2{
+        padding-top: 300px;
+        font-size: xx-large;
+        padding-left: 50px;
+    }
+    #ndcontainer{
+        background-color: aqua;
+    }
+    #tcont{
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows: repeat(8,1fr);
+        width: 100%;
+        height: 500px;
+        border: 1px solid rgb(179, 172, 172);
+        gap: 10px;
+
+
+
+    }
+    #tcont>div:nth-child(1){
+        grid-column-start:1 ;
+        grid-column-end:2 ;
+        grid-row-start: 1;
+        grid-row-end:2 ;
+        border: 1px solid rgb(179, 172, 172);
+    }
+    #tcont>div:nth-child(3){
+        grid-column-start:1 ;
+        grid-column-end:2 ;
+        grid-row-start: 2;
+        grid-row-end:3 ;
+        border: 1px solid rgb(179, 172, 172);
+    }
+    #tcont>div:nth-child(5){
+        grid-column-start:1 ;
+        grid-column-end:2 ;
+        grid-row-start: 3;
+        grid-row-end:4 ;
+        border: 1px solid rgb(179, 172, 172);
+    }
+    #tcont>div:nth-child(7){
+        grid-column-start:1 ;
+        grid-column-end:2 ;
+        grid-row-start: 4;
+        grid-row-end:5;
+        border: 1px solid rgb(179, 172, 172);
+    }
+    #tcont>div:nth-child(9){
+        grid-column-start:1 ;
+        grid-column-end:2 ;
+        grid-row-start: 5;
+        grid-row-end:6 ;
+        border: 1px solid rgb(179, 172, 172);
+    }
+    #tcont>div:nth-child(11){
+        grid-column-start:1 ;
+        grid-column-end:2 ;
+        grid-row-start: 6;
+        grid-row-end:7 ;
+        border: 1px solid rgb(179, 172, 172);
+    }
+    #tcont>div:nth-child(13){
+        grid-column-start:1 ;
+        grid-column-end:2 ;
+        grid-row-start: 7;
+        grid-row-end:8;
+        border: 1px solid rgb(179, 172, 172);
+    }
+    #tcont>div:nth-child(15){
+        grid-column-start:1 ;
+        grid-column-end:2 ;
+        grid-row-start: 8;
+        grid-row-end:9 ;
+        border: 1px solid rgb(179, 172, 172);
+    }
+  
+    #tcont>div:nth-child(2){
+        grid-column-start:2 ;
+        grid-column-end:3 ;
+        grid-row-start: 1;
+        grid-row-end:2 ;
+        border: 1px solid rgb(179, 172, 172);
+    }
+    #tcont>div:nth-child(4){
+        grid-column-start:2 ;
+        grid-column-end:3 ;
+        grid-row-start: 2;
+        grid-row-end:3 ;
+        border: 1px solid rgb(179, 172, 172);
+    }
+    #tcont>div:nth-child(6){
+        grid-column-start:2 ;
+        grid-column-end:3 ;
+        grid-row-start: 3;
+        grid-row-end:4;
+        border: 1px solid rgb(179, 172, 172);
+    }
+    #tcont>div:nth-child(8){
+        grid-column-start:2 ;
+        grid-column-end:3 ;
+        grid-row-start: 4;
+        grid-row-end:5 ;
+        border: 1px solid rgb(179, 172, 172);
+    }
+    #tcont>div:nth-child(10){
+        grid-column-start:2 ;
+        grid-column-end:3 ;
+        grid-row-start: 5;
+        grid-row-end:6 ;
+        border: 1px solid rgb(179, 172, 172);
+    }
+    #tcont>div:nth-child(12){
+        grid-column-start:2 ;
+        grid-column-end:3 ;
+        grid-row-start: 6;
+        grid-row-end:7 ;
+        border: 1px solid rgb(179, 172, 172);
+    }
+    #tcont>div:nth-child(14){
+        grid-column-start:2 ;
+        grid-column-end:3 ;
+        grid-row-start: 7;
+        grid-row-end:8 ;
+        border: 1px solid rgb(179, 172, 172);
+    }
+    #tcont>div:nth-child(16){
+        grid-column-start:2 ;
+        grid-column-end:3 ;
+        grid-row-start: 8;
+        grid-row-end:9 ;
+        border: 1px solid rgb(179, 172, 172);
+    }
+    #tcont>div:nth-child(1)>img{
+  width: 100%;
+    }
+    #tcont>div:nth-child(2)>img{
+  width: 100%;
+    }
+    #tcont>div:nth-child(3)>img{
+  width: 100%;
+    }
+    #tcont>div:nth-child(4)>img{
+  width: 100%;
+    }
+    #tcont>div:nth-child(5)>img{
+  width: 100%;
+    }
+    #tcont>div:nth-child(6)>img{
+  width: 100%;
+    }
+    #tcont>div:nth-child(7)>img{
+  width: 100%;
+    }
+    #tcont>div:nth-child(8)>img{
+  width: 100%;
+    }
+    #tcont>div:nth-child(9)>img{
+  width: 100%;
+    }
+    #tcont>div:nth-child(10)>img{
+  width: 100%;
+    }
+    #tcont>div:nth-child(11)>img{
+  width: 100%;
+    }
+    #tcont>div:nth-child(12)>img{
+  width: 100%;
+    }
+    #tcont>div:nth-child(13)>img{
+  width: 100%;
+    }
+    #tcont>div:nth-child(14)>img{
+  width: 100%;
+    }
+    #tcont>div:nth-child(15)>img{
+  width: 100%;
+    }
+    #tcont>div:nth-child(16)>img{
+  width: 100%;
+    }
+  #more>h1{
+ padding-top: 7100px;
+ padding-left: 200px;
+ /* background-color: aqua; */
+ /* color: aqua; */
+
+  }
+  #more1>div{
+    display: grid;
+    width: 80%;
+    height: 500px;
+    grid-template-columns:repeat(3,1fr) ;
+    justify-content: space-around;
+    margin: auto;
+    border: 1px solid rgb(179, 172, 172);
+    background-color: antiquewhite;
+   
+
+  }
+   #more1>div>div:nth-child(1){
+    grid-column-start:1 ;
+        grid-column-end:2 ;
+        
+    
+
+
+   }
+   #more1>div>div:nth-child(2){
+    grid-column-start:2 ;
+        grid-column-end:3 ;
+        
+   
+
+
+   }
+   #more1>div>div:nth-child(3){
+    grid-column-start:3 ;
+        grid-column-end:4;
+        
+       
+
+
+   }
+   #more1>div>div:nth-child(1)>img{
+    width: 70%;
+    padding-left: 50px;
+    padding-top: 20px;
+   }
+   #more1>div>div:nth-child(2)>img{
+    width: 70%;
+    padding-left: 50px;
+    padding-top: 20px;
+   }
+   #more1>div>div:nth-child(3)>img{
+    width: 70%;
+    padding-left: 50px;
+    padding-top: 20px;
+   }
+   #more1>div>div:nth-child(1)>h1{
+  /* margin-left: 50px; */
+  text-align: center;
+ 
+   }
+   #more1>div>div:nth-child(2)>h1{
+  /* margin-left: 50px; */
+  text-align: center;
+ 
+   }
+   #more1>div>div:nth-child(3)>h1{
+  /* margin-left: 50px; */
+  text-align: center;
+ 
+   }
+    
+
+
+   
+
+  
+    
+  
+
+</style>
+<body>
+    <div id="cont">
+        <div class="navbar">
+            <div>
+                <h3>BUYBIT WEAR</h3>
+                <P>New</P>
+                <P>Women</P>
+                <P>Men</P>
+                <P>Kids</P>
+                <P>Swim</P>
+                <P>Cashmere</P>
+                <P>Home</P>
+                <P>Stories</P>
+                <P>Sale</P>
+                <input type="text" value="Search" id="Search">
+              <a href="./signin.html">Sign In</a>
+              <a href="./Cart.html">Cart</a>
+            </div>
+
+        </div>
+        <div class="A">
+            <p>Have a question? We can help.</p>
+
+        </div>
+        <div id="MidImage">
+           
+            <div>
+             <img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img0a2.jpg" alt="">
+            </div>
+            <div>
+             <img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img0b.jpg" alt="">
+            </div>
+
+        </div>
+    </div>
+    <div id="h2">  <h1>More styles arriving</h1></div>
+    <div id="tcont">
+       <div><img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img5.jpg" alt=""></div>
+       <div><img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img6.jpg" alt=""></div>
+       <div><img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img7.jpg" alt=""></div>
+       <div><img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img8.jpg" alt=""></div>
+       <div><img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img9.jpg" alt=""></div>
+       <div><img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img10.jpg" alt=""></div>
+       <div><img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img11.jpg" alt=""></div>
+       <div><img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img12.jpg" alt=""></div>
+       <div><img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img13.jpg" alt=""></div>
+       <div><img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img14.jpg" alt=""></div>
+       <div><img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img15.jpg" alt=""></div>
+       <div><img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img16.jpg" alt=""></div>
+       <div><img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img17.jpg" alt=""></div>
+       <div><img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img18.jpg" alt=""></div>
+       <div><img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img19.jpg" alt=""></div>
+       <div><img src="https://www.jcrew.com/brand_creative/2023/202302-Feb/w_lookbook/2023feb_0214_lookbook_w_img22.jpg" alt=""></div>
+
+    </div>
+ 
+ <div id="more"><h1>More to the Stories</h1></div>
+ <div id="more1">
+    <div>
+    <div><img src="https://www.jcrew.com/brand_creative/2023/footers/feb_m_lookbook.jpg" alt="">
+    <h1>Men's Spring 2023 Lookbook</h1></div>
+    <div><img src="https://www.jcrew.com/brand_creative/2023/footers/feb_w_nicolew.jpg" alt="">
+    <h1>Creative Spirits Series</h1></div>
+    <div><img src="https://www.jcrew.com/brand_creative/2023/footers/feb_w_mei.jpg" alt="">
+        <h1>Creative Spirits Series</h1></div>
+</div>
+ </div>
+    
+</body>
+</html>
